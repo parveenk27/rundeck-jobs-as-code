@@ -1,0 +1,22 @@
+[ {
+  "defaultTab" : "nodes",
+  "description" : "",
+  "executionEnabled" : true,
+  "id" : "732e442c-4674-4b3b-aae6-bd7ba65c5177",
+  "loglevel" : "INFO",
+  "name" : "Shake Hand",
+  "nodeFilterEditable" : false,
+  "plugins" : {
+    "ExecutionLifecycle" : { }
+  },
+  "scheduleEnabled" : true,
+  "sequence" : {
+    "commands" : [ {
+      "description" : "Hand Shake",
+      "exec" : "printf \"%s\" \"Hand Shake Completed\""
+    } ],
+    "keepgoing" : false,
+    "strategy" : "node-first"
+  },
+  "uuid" : "732e442c-4674-4b3b-aae6-bd7ba65c5177"
+} ]
