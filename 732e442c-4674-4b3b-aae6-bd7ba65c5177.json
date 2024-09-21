@@ -13,7 +13,7 @@
   "sequence" : {
     "commands" : [ {
       "description" : "Hand Shake",
-      "exec" : "printf \"%s\" \"Hand Shake Completed\""
+      "exec" : "echo \"Hand Shake Completed at $(date)\""
     } ],
     "keepgoing" : false,
     "strategy" : "node-first"
