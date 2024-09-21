@@ -1,0 +1,31 @@
+[ {
+  "defaultTab" : "nodes",
+  "description" : "",
+  "executionEnabled" : true,
+  "id" : "bad8f5fb-39cf-400f-a5ff-b6ff194a5f2e",
+  "loglevel" : "INFO",
+  "name" : "Say Hello",
+  "nodeFilterEditable" : false,
+  "options" : [ {
+    "description" : "Enter your full name",
+    "label" : "Full Name",
+    "name" : "FullName",
+    "required" : true
+  } ],
+  "plugins" : {
+    "ExecutionLifecycle" : { }
+  },
+  "scheduleEnabled" : true,
+  "sequence" : {
+    "commands" : [ {
+      "args" : "${option.FullName}",
+      "autoSecureInput" : "false",
+      "fileExtension" : ".bash",
+      "passSecureInput" : "false",
+      "script" : "#!/usr/bin/env bash\nset -euo pipefail\n\nfunction main() {\n    printf \"Hello %s. Nice to meet you in Rundeck.\\n\" \"${@}\"\n}\n\nmain \"${@}\""
+    } ],
+    "keepgoing" : false,
+    "strategy" : "node-first"
+  },
+  "uuid" : "bad8f5fb-39cf-400f-a5ff-b6ff194a5f2e"
+} ]

@@ -1,0 +1,31 @@
+[ {
+  "defaultTab" : "nodes",
+  "description" : "",
+  "executionEnabled" : true,
+  "id" : "08fe3c8d-e2cf-4e4f-9adc-f460ea104065",
+  "loglevel" : "INFO",
+  "name" : "Say Bye",
+  "nodeFilterEditable" : false,
+  "plugins" : {
+    "ExecutionLifecycle" : { }
+  },
+  "scheduleEnabled" : true,
+  "sequence" : {
+    "commands" : [ {
+      "autoSecureInput" : "false",
+      "description" : "Show Date",
+      "fileExtension" : ".bash",
+      "passSecureInput" : "false",
+      "script" : "#!/usr/bin/env bash\nset -euo pipefail\n\nfunction main() {\n    date\n}\n\nmain"
+    }, {
+      "autoSecureInput" : "false",
+      "description" : "Show Current User Details",
+      "fileExtension" : ".bash",
+      "passSecureInput" : "false",
+      "script" : "#!/usr/bin/env bash\nset -euo pipefail\n\nfunction main() {\n    id -u\n}\n\nmain"
+    } ],
+    "keepgoing" : false,
+    "strategy" : "node-first"
+  },
+  "uuid" : "08fe3c8d-e2cf-4e4f-9adc-f460ea104065"
+} ]
