@@ -20,6 +20,14 @@
     "commands" : [ {
       "args" : "${option.FullName}",
       "autoSecureInput" : "false",
+      "description" : "Show Date",
+      "fileExtension" : ".bash",
+      "passSecureInput" : "false",
+      "script" : "#!/usr/bin/env bash\nset -euo pipefail\n\nfunction main() {\n    date\n}\n\nmain"
+    }, {
+      "args" : "${option.FullName}",
+      "autoSecureInput" : "false",
+      "description" : "Say Hello",
       "fileExtension" : ".bash",
       "passSecureInput" : "false",
       "script" : "#!/usr/bin/env bash\nset -euo pipefail\n\nfunction main() {\n    printf \"Hello %s. Nice to meet you in Rundeck.\\n\" \"${@}\"\n}\n\nmain \"${@}\""
